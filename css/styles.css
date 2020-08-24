@@ -1,0 +1,265 @@
+/* цвет основного текста #757575 */
+/* вторичный цвет текста #212121 */
+/* дополнительный цвет текста rgba(255, 255, 255, 0.6) */
+/* цвет логотипа #000000 */
+/* цвет акцента #2196F3 */
+/* первичный цвет фона #ffffff */
+/* вторичный цвет фона #F5F4FA */
+/* темный цвет #2f303a */
+
+:root {
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-color: #ffffff;
+  --secondary-color: #f5f4fa;
+  --dark-color: #2f303a;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Button */
+
+.button {
+  font-family: inherit;
+}
+
+/* Container */
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Logo */
+
+.logo {
+  color: #000000;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo .accent {
+  color: var(--accent-color);
+}
+
+/* Site nav */
+
+.hat-page {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  /* background-color: plum;
+  outline: 1px solid blue; */
+}
+
+.site-nav .link {
+  color: var(--secondary-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link-active {
+  color: var(--accent-color);
+}
+
+.communications .link {
+  color: var(--primary-text-color);
+}
+
+.communications .link:hover,
+.communications .link:focus {
+  color: var(--accent-color);
+}
+
+/* - .none-display  временно, позже переделать!  - */
+
+.none-display {
+  display: none;
+}
+
+/* ----- Стили главной страницы index.html ----- */
+
+/* Bonnet */
+
+.bonnet {
+  background-color: var(--dark-color);
+  text-align: center;
+}
+
+.bonnet .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.bonnet-title {
+  max-width: 696px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bonnet .button {
+  padding: 10px 32px;
+  border-color: transparent;
+  border-radius: 4px;
+
+  background-color: var(--accent-color);
+
+  color: var(--primary-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.bonnet .button:hover,
+.bonnet .button:focus {
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  color: var(--secondary-text-color);
+}
+
+/* Section */
+
+.section-title {
+  color: var(--secondary-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Features */
+
+.feature-list .title {
+  color: var(--secondary-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+/* Team */
+
+.team {
+  background-color: var(--secondary-color);
+}
+
+.team-list .title {
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-list .career {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--dark-color);
+
+  color: #ffffff;
+}
+.footer .title {
+  color: #ffffff;
+}
+
+.address {
+  font-style: normal;
+}
+
+.address .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
+}
+
+/* ----- Стили  страницы portfolio.html ----- */
+
+/* Catalog */
+
+.catalog .title {
+  color: var(--secondary-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.catalog .project {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.filter .button {
+  background-color: var(--secondary-color);
+
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.filter .button:hover,
+.filter .button:focus,
+.filter .button:active {
+  background-color: var(--accent-color);
+
+  color: var(--primary-color);
+}
