@@ -7,6 +7,9 @@
 /* вторичный цвет фона #F5F4FA */
 /* темный цвет #2f303a */
 
+/* background-color: plum;
+  outline: 1px solid blue; */
+
 :root {
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -55,6 +58,10 @@ body {
 /* Logo */
 
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  /* margin-right: 93px; */
+
   color: #000000;
 
   font-family: Raleway, sans-serif;
@@ -67,20 +74,39 @@ body {
   color: var(--accent-color);
 }
 
+.logo .link {
+  display: block;
+}
+
 /* Site nav */
 
 .hat-page {
   font-weight: 500;
-  line-height: 1.14;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
 
+.hat-page .container {
+  display: flex;
+}
+
 .nav {
-  /* background-color: plum;
-  outline: 1px solid blue; */
+  display: flex;
+}
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
 }
 
@@ -93,7 +119,20 @@ body {
   color: var(--accent-color);
 }
 
+.communications {
+  display: flex;
+  margin-left: auto;
+}
+
+.communications .item + .item {
+  margin-left: 50px;
+}
+
 .communications .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
 }
 
@@ -128,18 +167,22 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+
   color: var(--primary-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .bonnet .button {
-  padding: 10px 32px;
+  padding-top: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+
   border-color: transparent;
   border-radius: 4px;
 
@@ -179,7 +222,7 @@ body {
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: calc(16 / 14);
   text-transform: uppercase;
 }
 
