@@ -27,11 +27,14 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  /* line-height: 1.71; */
+  line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -151,17 +154,17 @@ body {
 
 /* Bonnet */
 
-.bonnet {
+.banner {
   background-color: var(--dark-color);
   text-align: center;
 }
 
-.bonnet .container {
+.banner .container {
   padding-top: 200px;
   padding-bottom: 200px;
 }
 
-.bonnet-title {
+.banner-title {
   max-width: 696px;
   margin-top: 0;
   margin-left: auto;
@@ -172,18 +175,20 @@ body {
 
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  /* line-height: 1.36; */
+  line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.bonnet .button {
+.banner .button {
+  min-width: 200px;
   padding-top: 10px;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 10px;
 
-  border-color: transparent;
+  border: 0;
   border-radius: 4px;
 
   background-color: var(--accent-color);
@@ -192,12 +197,13 @@ body {
 
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  /* line-height: 1.87 ;*/
+  line-height: calc(30 / 16);
   letter-spacing: 0.06em;
 }
 
-.bonnet .button:hover,
-.bonnet .button:focus {
+.banner .button:hover,
+.banner .button:focus {
   background-color: var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -211,19 +217,62 @@ body {
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  /* line-height: 1.17; */
+  line-height: calc(42 / 36);
   text-align: center;
 }
 
 /* Features */
 
+.feature {
+  padding-top: 94px;
+}
+
+.feature-list {
+  display: flex;
+}
+
 .feature-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
 
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
+}
+
+.feature-list .item {
+  width: calc((100% - 30px * 3) / 4);
+  padding-bottom: 3px;
+}
+
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Practice */
+
+.practice {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.practice-list {
+  display: flex;
+  margin-top: 50px;
+}
+.practice-list img {
+  display: block;
+}
+
+.practice-list .item {
+  width: calc((100% - 30px * 2) / 3);
+}
+
+.practice-list .item:not(:last-child) {
 }
 
 /* Team */
