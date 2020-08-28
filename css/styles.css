@@ -70,7 +70,8 @@ body {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  /* line-height: 1.19; */
+  line-height: calc(31 / 26);
 }
 
 .logo .accent {
@@ -152,7 +153,7 @@ body {
 
 /* ----- Стили главной страницы index.html ----- */
 
-/* Bonnet */
+/* Banner */
 
 .banner {
   background-color: var(--dark-color);
@@ -213,6 +214,9 @@ body {
 /* Section */
 
 .section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: var(--secondary-text-color);
 
   font-weight: 700;
@@ -244,13 +248,20 @@ body {
   text-transform: uppercase;
 }
 
-.feature-list .item {
+.feature-list .item,
+.team-list .item {
   width: calc((100% - 30px * 3) / 4);
   padding-bottom: 3px;
 }
 
-.feature-list .item:not(:last-child) {
+.feature-list .item:not(:last-child),
+.practice-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.feature-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Practice */
@@ -260,11 +271,13 @@ body {
   padding-bottom: 94px;
 }
 
-.practice-list {
+.practice-list,
+.team-list {
   display: flex;
   margin-top: 50px;
 }
-.practice-list img {
+.practice-list img,
+.team-list img {
   display: block;
 }
 
@@ -272,8 +285,9 @@ body {
   width: calc((100% - 30px * 2) / 3);
 }
 
-.practice-list .item:not(:last-child) {
-}
+/* .practice-list .item:not(:last-child) {
+  margin-right: 30px;
+} */
 
 /* Team */
 
@@ -281,7 +295,41 @@ body {
   background-color: var(--secondary-color);
 }
 
+.team-box {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* .team-list {
+  display: flex;
+  margin-top: 50px;
+} */
+
+.team-list .item {
+  display: block;
+  padding-bottom: 0;
+
+  width: calc((100% - 30px * 3) / 4);
+  text-align: center;
+}
+
+.team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* .team-list img {
+  display: block;
+} */
+
+.team-list .text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
 
   font-weight: 500;
@@ -301,8 +349,26 @@ body {
 
   color: #ffffff;
 }
+
 .footer .title {
   color: #ffffff;
+}
+
+.footer .logo {
+  display: block;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.main-address {
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.main-address .text {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .address {
