@@ -6,8 +6,10 @@
 /* первичный цвет фона #ffffff */
 /* вторичный цвет фона #F5F4FA */
 /* темный цвет #2f303a */
+/* цвет рамки #eeeeee */
 
-/* background-color: plum;
+/* стили для теста
+ background-color: plum;
   outline: 1px solid blue; */
 
 :root {
@@ -17,6 +19,7 @@
   --primary-color: #ffffff;
   --secondary-color: #f5f4fa;
   --dark-color: #2f303a;
+  --border-color: #eeeeee;
 }
 
 body {
@@ -62,7 +65,7 @@ body {
 
 .logo {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   /* margin-right: 93px; */
 
   color: #000000;
@@ -80,6 +83,18 @@ body {
 
 .logo .link {
   display: block;
+}
+
+/* Line -- ?*/
+
+.line {
+  position: absolute;
+  width: 1600px;
+  height: 0px;
+  left: 0px;
+  top: 80px;
+
+  border: 1px solid #ececec;
 }
 
 /* Site nav */
@@ -285,10 +300,6 @@ body {
   width: calc((100% - 30px * 2) / 3);
 }
 
-/* .practice-list .item:not(:last-child) {
-  margin-right: 30px;
-} */
-
 /* Team */
 
 .team {
@@ -299,11 +310,6 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
-/* .team-list {
-  display: flex;
-  margin-top: 50px;
-} */
 
 .team-list .item {
   display: block;
@@ -316,10 +322,6 @@ body {
 .team-list .item:not(:last-child) {
   margin-right: 30px;
 }
-
-/* .team-list img {
-  display: block;
-} */
 
 .team-list .text {
   padding-top: 30px;
@@ -348,6 +350,7 @@ body {
   background-color: var(--dark-color);
 
   color: #ffffff;
+  line-height: calc(21 / 14);
 }
 
 .footer .title {
@@ -361,9 +364,10 @@ body {
 }
 
 .main-address {
-  margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  width: 370px;
 }
 
 .main-address .text {
@@ -384,11 +388,112 @@ body {
   color: var(--accent-color);
 }
 
+.address-list .item + .item {
+  margin-top: 9px;
+}
+
 /* ----- Стили  страницы portfolio.html ----- */
+
+/* Fiter */
+
+.filter {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter-button {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-button .item {
+  display: block;
+}
+
+.filter-button .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter .button {
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  background-color: var(--secondary-color);
+
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  /* line-height: 1.62; */
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+}
+
+.filter .button:hover,
+.filter .button:focus,
+.filter .button:active {
+  outline-color: transparent;
+  outline-width: 0;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  background-color: var(--accent-color);
+
+  color: var(--primary-color);
+}
 
 /* Catalog */
 
+.catalog {
+  padding-top: 50px;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  /*   также можно выровнять, но ... */
+  /* justify-content: space-between; */
+}
+
+.catalog-list img {
+  display: block;
+}
+
+.catalog-list .item {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  /*  адаптивная ширина блоков */
+  width: calc((100% - 30px * 2) / 3);
+}
+
+.catalog-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+/*  неидиально, в данном случае работает */
+.catalog-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.catalog-text {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .catalog .title {
+  margin-bottom: 4px;
+
   color: var(--secondary-text-color);
 
   font-weight: 700;
@@ -402,22 +507,4 @@ body {
 
   font-size: 16px;
   line-height: 1.87;
-}
-
-.filter .button {
-  background-color: var(--secondary-color);
-
-  color: var(--secondary-text-color);
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-}
-
-.filter .button:hover,
-.filter .button:focus,
-.filter .button:active {
-  background-color: var(--accent-color);
-
-  color: var(--primary-color);
 }
